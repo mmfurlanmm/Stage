@@ -1,0 +1,15 @@
+<div class="jumbotron" style="width: 50%; margin: auto;">
+    <h1 style="text-align: center">Bienvenue !</h1>
+    <form style="width: 40%; margin: auto; margin-top: 5em">
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Identifiant" required name="identifiant" [(ngModel)]="identifiant"
+                #ident="ngModel">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Mot de passe" required name="motDePasse" [(ngModel)]="motDePasse"
+                #pass="ngModel">
+        </div>
+
+        <button type="submit" class="btn btn-success" style="margin-top: 1em" (click)="connexionOk()" [disabled]="ident.invalid || pass.invalid">Connexion</button>
+    </form>
+</div>
